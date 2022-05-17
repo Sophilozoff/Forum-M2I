@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DiscussionService} from "../../services/discussion.service";
 import {Discussion} from "../../models/discussion.model";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-discussions',
@@ -24,10 +25,12 @@ export class DiscussionsComponent implements OnInit {
 
   like(id: number) {
     this.discussionService.likeDiscussion(id).subscribe();
+    window.location.reload();
   }
 
   dislike(id: number) {
-    this.discussionService.likeDiscussion(id).subscribe();
+    this.discussionService.dislikeDiscussion(id).subscribe();
+    window.location.reload();
   }
 
 }
