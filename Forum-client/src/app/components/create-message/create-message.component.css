@@ -1,0 +1,27 @@
+.forum-section {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 75px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.form-group > input, .form-group > textarea {
+  font-size: 1.2em;
+  width: 100%;
+  border: none;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.button {
+  background-color: #2f921c;
+  color: white;
+  border: none;
+  margin-top: 4vh;
+  padding: 25px 25px;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

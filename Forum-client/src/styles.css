@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+  letter-spacing: 1.2px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  letter-spacing: 4px;
+  font-size: 3em;
+}
+
+h2 {
+  letter-spacing: 1.5px;
+  font-size: 2em;
+  margin : 50px 0;
+  color: #ba4343;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

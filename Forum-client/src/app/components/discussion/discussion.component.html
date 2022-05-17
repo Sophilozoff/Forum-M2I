@@ -1,0 +1,18 @@
+<main *ngIf="discussion">
+  <section class="forum-section">
+    <h3>{{discussion.title}} <span>créé par :  {{discussion.author}}</span></h3>
+    <article class="message">
+      <p>{{discussion.firstMessage}}</p>
+      <p>Posté par : {{discussion.author}}, le : {{discussion.createdAt | date : 'dd-MM-yyyy'}}</p>
+    </article>
+    <ng-container *ngFor="let message of messages">
+      <article class="message">
+        <p>{{message.content}}</p>
+        <p>Posté par : {{message.author}}, le : {{message.createdAt | date : 'dd-MM-yyyy'}}</p>
+      </article>
+    </ng-container>
+    <app-create-message *ngIf="newDiscussion"></app-create-message>
+    <button class="cursor-pointer answer" *ngIf="!newDiscussion"  (click)="answerDiscussion()">Répondre</button>
+    <button class="cursor-pointer cancel" *ngIf="newDiscussion" (click)="cancelDiscussion()">Annuler</button>
+  </section>
+</main>

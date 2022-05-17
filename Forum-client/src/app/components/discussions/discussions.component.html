@@ -1,0 +1,16 @@
+<h2>Liste des discussions :</h2>
+
+<ng-container *ngFor="let discussion of discussions">
+  <article >
+    <div class="title">
+      <p class="cursor-pointer" routerLink="/discussion/{{discussion.id}}">{{discussion.title}}</p>
+      <p>
+        <img class="cursor-pointer" src="/assets/icons/thumb_up.png" alt="like" (click)=like(discussion.id)>
+        <img class="cursor-pointer" src="/assets/icons/thumb_down.png" alt="dislike" (click)=dislike(discussion.id)>
+        Likes : {{discussion.likes}}
+      </p>
+    </div>
+    <p class="cursor-pointer" routerLink="/discussion/{{discussion.id}}">Écrit par : {{discussion.author}}, le {{discussion.createdAt | date : 'dd-MM-yyyy'}}</p>
+    <p class="cursor-pointer" routerLink="/discussion/{{discussion.id}}">{{discussion.firstMessage}}</p>
+  </article>
+</ng-container>

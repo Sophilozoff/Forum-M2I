@@ -1,0 +1,14 @@
+<section class="forum-section">
+  <h2>Répondre :</h2>
+  <form [formGroup]="messageForm"  (ngSubmit)="postNewMessage()">
+    <div class="form-group">
+      <label for="author"> Mon pseudo :</label>
+      <input type="text" formControlName="author" id="author">
+    </div>
+    <div class="form-group">
+      <label for="content"> Message:</label>
+      <textarea formControlName="content" id="content"></textarea>
+    </div>
+    <button class="button cursor-pointer" type="submit" >Valider</button>
+  </form>
+</section>

@@ -1,0 +1,18 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #ef8484;
+  color: white;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ul > li {
+  list-style: none;
+}
