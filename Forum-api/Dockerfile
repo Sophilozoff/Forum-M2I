@@ -1,4 +1,8 @@
+FROM maven:3.8.5-jdk-11 AS build
+COPY src /usr/src/app
+COPY pom.xml /usr/src/app
+RUN mvn -f /usr/src/app/pom.xml clean package
+
 FROM openjdk:13-jdk-alpine
-RUN mvn clean install && mvn build
-COPY ./target/forum-api-0.0.1-SNAPSHOT.jar .
+COPY --from=build /usr/src/app/target/forum-api-0.0.1-SNAPSHOT.jar .
 ENTRYPOINT ["java","-jar","forum-api-0.0.1-SNAPSHOT.jar"]
