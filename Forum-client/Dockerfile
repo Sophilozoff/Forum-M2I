@@ -25,4 +25,4 @@ FROM nginx:1.21.4
 # On va copier, DEPUIS le _stage_ build (cf FROM .. as .. au dessus et --from=buil, les , les
 # fichiers compilés par npm (dans /usr/local/app/dist/express-gaumont) VERS ce stage, dans
 # /usr/share/nginx/html.
-COPY --from=build /usr/local/app/dist/docflow-client /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/forum-client /usr/share/nginx/html
